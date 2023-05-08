@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Style the main container */
+.mainDiv {
+  min-height: calc(100vh - 109px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the login form */
+.loginForm {
+  max-width: 500px;
+  padding: 2rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form fields */
+.formField {
+  margin-bottom: 1rem;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.formInput {
+  border: 2px solid #e5e7eb;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Style the submit button */
+.submitBtn {
+  display: block;
+  margin-top: 1.5rem;
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submitBtn:hover {
+  background-color: #1d4ed8;
+}
