@@ -30,3 +30,5 @@ Some possible dead-end scenarios include:
 **Note:** It is guaranteed that the random Sudoku puzzle generated on the website is always solvable.
 
 Link: https://sodokumaster-a97f4.web.app/
+
+# Note : It's not complete , there is dependencies problem in the last , however you can use the code to host your own
