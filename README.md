@@ -32,3 +32,9 @@ Some possible dead-end scenarios include:
 Link: https://sodokumaster-a97f4.web.app/
 
 # Note : It's not complete , there is dependencies problem in the last , however you can use the code to host your own
+# Output              
+
+![home page](https://user-images.githubusercontent.com/75237568/236872933-27d12d43-7e05-40ce-9f64-0f8cf71d443a.jpg)
+![signup](https://user-images.githubusercontent.com/75237568/236872999-e2160e47-182b-4bc6-868a-9b5dd2cde0f3.jpg)
+![sudoku](https://user-images.githubusercontent.com/75237568/236873055-eccb1607-752a-4727-a658-033489bdd146.jpg)
+
