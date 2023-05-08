@@ -18,7 +18,7 @@ export default function Header() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (loading || !user) {
+    if(loading || !user){
       return;
     }
     const q = query(collection(db, "users"), where("email", "==", user.email));
@@ -44,39 +44,54 @@ export default function Header() {
   }
 
   return (
-    <header className="bg-gray-800 py-6">
-      <nav className="container mx-auto flex justify-between items-center">
-        <div>
-          <Link to="/" className="flex items-center">
-            <div className="bg-blue-400 rounded-full h-10 w-10 flex items-center justify-center mr-2">
-              <span className="text-white text-3xl">Sudoku</span>
+    <>
+      {loading ? (
+        <></>
+      ) : !user ? (
+        <>
+          <nav className="container mx-auto flex justify-between items-center">
+            <div className="flex items-center flex-shrink-0 mr-6 ml-2">
+              <div className="bg-blue-400 rounded-full h-10 w-10 flex items-center justify-center mr-2">
+                <span className="text-white text-3xl">Sudoku</span>
+              </div>
+              <span className="text-3xl font-bold text-white">Puzzle</span>
             </div>
-            <span className="text-3xl font-bold text-white">Master</span>
-          </Link>
-        </div>
-        {user && (
-          <div className="flex items-center">
-            <div className="mr-4">
-              <Link
-                to="/profile"
-                className="text-white hover:text-gray-400 transition duration-200"
-              >
-                Profile
-              </Link>
-            </div>
-            <div>
+            <div className="flex items-center justify-between flex-wrap">
               <a
-                href="https://github.com/Ambarcode"
+                className="btn btn-ghost"
+                href="https://github.com/HANS-2002/detective_treasure_elitmus"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-gray-400 transition duration-200"
+                rel="noreferrer"
+                content="noopener noreferrer"
               >
-                Creator Profile
+                SOURCE CODE
               </a>
             </div>
-          </div>
-        )}
-      </nav>
-    </header>
+          </nav>
+        </>
+      ) : (
+        <>
+          <nav className="flex items-center justify-between flex-wrap text-white bg-zinc-800 p-2">
+            <div className="flex items-center flex-shrink-0 mr-6 ml-2">
+              <div className="bg-blue-400 rounded-full h-10 w-10 flex items-center justify-center mr-2">
+                <span className="text-white text-3xl">Sudoku</span>
+              </div>
+              <span className="text-3xl font-bold text-white">
+                {userDetails.isAdmin ? "Sudoku Puzzle" : <Link to="/">Sudoku Puzzle</Link>}
+              </span>
+            </div>
+            <div className="flex-none gap-2 dropdown dropdown-end dropdown-hover">
+              <button className="btn btn-ghost mr-2" onClick={handleLogoutClick}>
+                Logout
+              </button>
+            </div>
+          </nav>
+        </>
+      )}
+    </>
   );
+  
+  
+  
+  
 }

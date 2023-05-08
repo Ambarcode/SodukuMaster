@@ -58,7 +58,7 @@ export default function Signin() {
 
   return (
     <div className="flex flex-col items-center justify-center py-2 bg-gray-100">
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-white rounded-md shadow-md">
+      <div className="flex h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-white rounded-md shadow-md">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-6">
             Sign in to play
@@ -131,8 +131,4 @@ export default function Signin() {
     </div>
   );
   
-  
-
-
-
 }
